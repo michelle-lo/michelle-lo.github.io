@@ -57,7 +57,21 @@
         <ul>
           <li>Runs the CoffeeScript in the terminal</li>
         </ul>
-      <li>How compiling it looks</li>
+      <li>What happens when you compile CoffeeScript?</li>
+      <pre>
+        <code>(function() {</code>
+
+          var foo;
+
+          foo = function() {
+            return "hello world"
+          };
+
+        <code>}).call(this);</code>
+      </pre>
+      <ul>
+        <li>WHY THERE IS THAT BIG FUNCTION AROUND IT</li>
+      </ul>
     </ul>
     <hr>
 
@@ -75,25 +89,86 @@
 
     <h2>Functions</h2>
     <ul>
-      <li></li>
+      <li>Defined by the function name, an equal sign, a list of parameters, an arrow, and the function body</li>
+      <pre>
+        <code>foo = (x, y) -></code>
+        <code>  x * y</code>
+
+        <code>foo 3,7</code>
+      </pre>
+      <li>Doesn’t need keyword <code>return</code> because every function returns the result of the last line of code</li>
+      <li>Can call functions without parentheses</code>
+      <li>Need parentheses if you have no arguments</code>
     </ul>
     <hr>
 
     <h2>Splat</h2>
     <ul>
-      <li></li>
+      <li>A convenient way to accept multiple values as arguments to functions</li>
+      <li><code><i>var_name</i>...</code></li>
+      <li>The other arguments passed will be stored in the variable as an array</li>
+      <pre>
+        <code>food = ["pasta", "sushi", "steak", "burgers"]
+        eat = (first, second, rest...) ->
+          console.log "my favorite food is #{first}"
+          console.log "my second favorite food is #{second}"
+          for item in rest
+            console.log "i also like #{item}"
+        eat food...</code> #passes the whole array in the function
+
+        # my favorite food is pasta
+        # my second favorite food is sushi
+        # i also like steak
+        # i also like burgers
+      </pre>
     </ul>
     <hr>
 
     <h2>Arrays</h2>
     <ul>
-      <li></li>
+      <li>There are several different ways to initialize and declare arrays</li>
+      <pre>
+        <code>arr = [0,1,2,3]
+        arr = [
+          0,
+          1,
+          2,
+          3
+        ]
+        arr = [
+          0, 1,
+          2, 3
+        ]</code>
+
+        # you can also omit the commas!
+        <code>arr = [
+          0
+          1
+          2
+          3
+        ]</code>
+      </pre>
     </ul>
     <hr>
 
     <h2>Ranges</h2>
     <ul>
-      <li></li>
+      <li>Ranges aren’t a standard object type in JS so they get compiled down to arrays</li>
+      <li><code>range = [<i>int</i>..<i>int</i>]</code></li>
+        <ul>
+          <li>The values are inclusive</li>
+        </ul>
+      <li>Can use them to access sections of array or create arrays</li>
+      <pre>
+        <code>days = [1..7]</code> #[1,2,3,4,5,6,7]
+
+        #makes an array with the elements of the days array
+        #starting from index 1 to index 4
+        <code>two_to_five = days[1..4]</code> #[2,3,4,5]
+
+        #replaces a section of the array
+        <code>days[1..4] = ["two","three","four","five"]</code> #[1,"two","three","four","five",6,7]
+      </pre>
     </ul>
     <hr>
 
