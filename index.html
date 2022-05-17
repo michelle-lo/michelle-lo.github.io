@@ -7,7 +7,7 @@
   <body>
     <h3 style="color: #aaa;;">TEDxSoftDev</h3>
     <h1>CoffeeScript</h1>
-    <h3 style="color: #666; font-style: italic; font-weight: 400;">Rachel Xiao and Michello Lo</h3>
+    <h3 style="color: #666; font-style: italic; font-weight: 400;">Rachel Xiao and Michelle Lo</h3>
     <hr>
 
     <h2>What is CoffeeScript?</h2>
@@ -28,8 +28,9 @@
 
     <h2>Concerns About CoffeeScript</h2>
     <ul>
-      <li></li>
-      <li>Is it worth the extra complexity?</li>
+      <li>Having to translate/compile (transpile) CoffeeScript to JavaScript in order to use it.</li>
+      <li>While it’s not required to learn JavaScript prior to using CoffeeScript, it might be helpful to learn JS beforehand.</li>
+      <li>Is it worth the extra complexity of learning another language?</li>
     </ul>
     <hr>
 
@@ -69,22 +70,61 @@
 
         <code>}).call(this);</code>
       </pre>
-      <ul>
+      <!-- <ul>
         <li>WHY THERE IS THAT BIG FUNCTION AROUND IT</li>
-      </ul>
+      </ul> -->
     </ul>
     <hr>
 
     <h2>Basic Syntax</h2>
     <ul>
-      <li></li>
+      <li>Comments use #
+      <li> No semicolons! </li>
+      <li> Logical blocks don’t need brackets. </li>
+      <li> Uses space indentation (tons of white space!) </li>
+      <li> String interpolation <code>#{value}</code> which makes it easier to stringify values. </li>
+      <li>Code that reads like English (makes it easier to understand)!</li>
     </ul>
     <hr>
 
     <h2>Variables</h2>
+    <br>
+    <b>In JS:</b>
     <ul>
-      <li></li>
+      <li> Eliminates the use of <code> var </code>, <code> let </code>, <code> const </code>, which all vary in scopes.</li>
+      <li>Declaring variables in JS: if you forget to write the keyword <code> var</code>, you can create global variables. Global variables can lead to confusing code: it’s hard to keep track of what values you’re assigning to the variable and you can even risk re-assigning it another value unintentionally.</li>
     </ul>
+    <pre>
+      <code>function foo() { </code>
+        <code>var a = 10; </code>//global variable a = 10
+        <code>function foobar() {
+          a = 15; </code>//without using the keyword var, you reassign a to 15
+        <code>}</code>
+        <code>alert(a); </code>//will return 15, not 10
+      <code>}
+      </code>
+    </pre>
+    <b>In CoffeeScript:</b>
+    <ul>
+      <li>Declaring variables is simple in CoffeeScript!</li>
+    </ul>
+      <pre>
+        <code>
+          name = "Michelle and Rachel"
+          year = 2022
+        </code>
+      </pre>
+    <ul>
+      <li>It makes every variable a local variable by wrapping everything in a anonymous function and prefixing every variable with <code>var</code> in JS.</li>
+      <li>If you want to declare a global variable for whatever reason, you can do so like this:</li>
+    </ul>
+    <pre>
+      <code>
+        obj = this
+        obj.age = 17
+      </code>
+    </pre>
+
     <hr>
 
     <h2>Functions</h2>
@@ -114,7 +154,7 @@
           console.log "my second favorite food is #{second}"
           for item in rest
             console.log "i also like #{item}"
-        eat food...</code> #passes the whole array in the function
+        eat food... #passes the whole array in the function </code>
 
         # my favorite food is pasta
         # my second favorite food is sushi
@@ -122,6 +162,91 @@
         # i also like burgers
       </pre>
     </ul>
+    <hr>
+
+    <h2>Operators and Conditionals</h2>
+    <ul>
+      <table>
+        <tr>
+          <th>CoffeeScript</th>
+          <th>JavaScript</th>
+        </tr>
+        <tr>
+          <td>true, yes, on</td>
+          <td>true</td>
+        </tr>
+        <tr>
+          <td>false, no, off</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>@, this</td>
+          <td>this</td>
+        </tr>
+        <tr>
+          <td>of</td>
+          <td>in</td>
+        </tr>
+        <tr>
+          <td>in</td>
+          <td>no JS equivalent</td>
+        </tr>
+        <tr>
+          <td>is</td>
+          <td>===</td>
+        </tr>
+        <tr>
+          <td>isnt</td>
+          <td>!==</td>
+        </tr>
+        <tr>
+          <td>not</td>
+          <td>!</td>
+        </tr>
+        <tr>
+          <td>and</td>
+          <td>&&</td>
+        </tr>
+        <tr>
+          <td>or</td>
+          <td>||</td>
+        </tr>
+      </table>
+      <li>Most operators and aliases in CoffeeScript are expressed in words, which makes conditional statements easy to understand!</li>
+      <pre>
+        <code>
+          light_bulbs() if switch is on
+          lightbulbs() unless switch is not on
+          if dog isnt false and alive is true then play()
+        </code>
+      </pre>
+      <li><b>Note:</b> The unless keyword negates the condition which can save you time and space for writing a negative statement.</li>
+
+    </ul>
+    <hr>
+
+    <h2>Existential Operator</h2>
+    <ul>
+      <li>Expressed as <code>?</code> in CoffeeScript</li>
+      <li>Checks the existence of a variable <code>var != null</code>. If the variable has not been declared, it will also check if <code>typeof var != undefined</code>.</li>
+    </ul>
+    <b>CoffeeScript Code</b>
+    <pre>
+      <code>
+        login() if not user?
+      </code>
+    </pre>
+
+    <b>Transpiled to JavaScript</b>
+    <pre>
+      <code>
+        '''if user is not already logged in, login()'''
+        if (user == null) {
+          login();
+        }
+      </code>
+    </pre>
+
     <hr>
 
     <h2>Arrays</h2>
@@ -174,39 +299,67 @@
 
     <h2>Objects</h2>
     <ul>
-      <li></li>
-    </ul>
-    <hr>
+      <li>Creating objects in CoffeeScript saves a lot of space.</li>
+      <li>You can assign properties, functions, objects to objects.</li>
+      <li>Fun fact: If you assign a property called <code>class</code> to an object, it will transpile to JS as <code>“class”</code> with quotation marks!</li>
 
-    <h2>Classes</h2>
-    <ul>
-      <li></li>
-    </ul>
-    <hr>
 
-    <h2>Operators and Aliases</h2>
-    <ul>
-      <li></li>
     </ul>
-    <hr>
-
-    <h2>Existential Operator</h2>
-    <ul>
-      <li></li>
-    </ul>
+    <pre>
+      <code>
+        sushi =
+          kind: "roll"
+          roll: ->
+            "Rolled"
+          fish: "Salmon"
+          class: "japanese"
+          ingredients:
+            rice: "white"
+            veg: "cucumber"
+      </code>
+    </pre>
     <hr>
 
     <h2>Comprehensions</h2>
     <ul>
-      <li></li>
+      <li>Comprehensions allow you to iterate through arrays using more readable code and return an array.</li>
     </ul>
+    <pre>
+      <code>
+        multiples = for num in [0..10] num * 10
+      </code>
+    or
+      <code>
+        multiples = (num * 10 for num in [0..10]
+      </code>
+    returns
+    <code>[0,10,20,30,40,50,60,70,80,90,100]</code>
+    </pre>
+    <hr>
+
+    <h2>Conclusion: Should you learn CoffeeScript?</h2>
+    <br>
+    <b>Pros:</b>
+    <ul>
+      <li>Shorter JS code and a lot more whitespace. Write less, do more! </li>
+      <li>Easier to write functions, objects, conditionals, loops, etc. </li>
+      <li>Readable code</li>
+    </ul>
+    <b>Cons:</b>
+    <ul>
+      <li>It’s another language you have to learn and it’s not as popular as JS</li>
+      <li>You can only compile to JS (transpile) and debug with JS code.</li>
+    </ul>
+
     <hr>
 
     <h2>Additional Info</h2>
     <ul>
       <li>If you are looking to learn more about CoffeeScript
         <ul>
-          <li></li>
+          <li><a href="https://bit.ly/softdev-coffeescript">Our TedX presentation</a></li>
+          <li><a href="https://coffeescript.org/#introduction">CoffeeScript Documentation</a></li>
+          <li><a href="https://github.com/jashkenas/coffeescript">CoffeeScript Github</a></li>
         </ul>
       </li>
     </ul>
