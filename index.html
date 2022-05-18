@@ -101,29 +101,24 @@
           a = 15; </code>//without using the keyword var, you reassign a to 15
         <code>}</code>
         <code>alert(a); </code>//will return 15, not 10
-      <code>}
-      </code>
+      <code>}</code>
     </pre>
     <b>In CoffeeScript:</b>
     <ul>
       <li>Declaring variables is simple in CoffeeScript!</li>
-    </ul>
       <pre>
-        <code>
-          name = "Michelle and Rachel"
-          year = 2022
-        </code>
+        <code>name = "Michelle and Rachel"</code>
+        <code>year = 2022</code>
       </pre>
+    </ul>
     <ul>
       <li>It makes every variable a local variable by wrapping everything in a anonymous function and prefixing every variable with <code>var</code> in JS.</li>
       <li>If you want to declare a global variable for whatever reason, you can do so like this:</li>
+      <pre>
+        <code>obj = this</code>
+        <code>obj.age = 17</code>
+      </pre>
     </ul>
-    <pre>
-      <code>
-        obj = this
-        obj.age = 17
-      </code>
-    </pre>
 
     <hr>
 
@@ -214,11 +209,9 @@
       </table>
       <li>Most operators and aliases in CoffeeScript are expressed in words, which makes conditional statements easy to understand!</li>
       <pre>
-        <code>
-          light_bulbs() if switch is on
-          lightbulbs() unless switch is not on
-          if dog isnt false and alive is true then play()
-        </code>
+        <code>light_bulbs() if switch is on</code>
+        <code>lightbulbs() unless switch is not on</code>
+        <code>if dog isnt false and alive is true then play()</code>
       </pre>
       <li><b>Note:</b> The unless keyword negates the condition which can save you time and space for writing a negative statement.</li>
 
@@ -232,19 +225,15 @@
     </ul>
     <b>CoffeeScript Code</b>
     <pre>
-      <code>
-        login() if not user?
-      </code>
+      <code>login() if not user?</code>
     </pre>
 
     <b>Transpiled to JavaScript</b>
     <pre>
-      <code>
-        '''if user is not already logged in, login()'''
+      <code>'''if user is not already logged in, login()'''
         if (user == null) {
           login();
-        }
-      </code>
+        }</code>
     </pre>
 
     <hr>
@@ -302,12 +291,8 @@
       <li>Creating objects in CoffeeScript saves a lot of space.</li>
       <li>You can assign properties, functions, objects to objects.</li>
       <li>Fun fact: If you assign a property called <code>class</code> to an object, it will transpile to JS as <code>“class”</code> with quotation marks!</li>
-
-
-    </ul>
-    <pre>
-      <code>
-        sushi =
+      <pre>
+        <code>sushi =
           kind: "roll"
           roll: ->
             "Rolled"
@@ -315,26 +300,26 @@
           class: "japanese"
           ingredients:
             rice: "white"
-            veg: "cucumber"
-      </code>
-    </pre>
+            veg: "cucumber"</code>
+      </pre>
+    </ul>
     <hr>
 
     <h2>Comprehensions</h2>
     <ul>
       <li>Comprehensions allow you to iterate through arrays using more readable code and return an array.</li>
+      <pre>
+        <code>multiples = for num in [0..10] num * 10</code>
+
+      or
+
+        <code>multiples = (num * 10 for num in [0..10]</code>
+        
+      returns
+
+      <code>[0,10,20,30,40,50,60,70,80,90,100]</code>
+      </pre>
     </ul>
-    <pre>
-      <code>
-        multiples = for num in [0..10] num * 10
-      </code>
-    or
-      <code>
-        multiples = (num * 10 for num in [0..10]
-      </code>
-    returns
-    <code>[0,10,20,30,40,50,60,70,80,90,100]</code>
-    </pre>
     <hr>
 
     <h2>Conclusion: Should you learn CoffeeScript?</h2>
