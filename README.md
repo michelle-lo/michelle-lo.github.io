@@ -1,3 +1,3 @@
-# michelle-lo.github.io
+# Aspiring Software Developer and Data Scientist
 
 hello world!
