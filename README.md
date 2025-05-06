@@ -1,14 +1,9 @@
-<p align="center">
-  <a href="https://github.com/michelle-lo" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/30/000000/github.png" alt="GitHub"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/michelle-lo-087714216/" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/30/000000/linkedin.png" alt="LinkedIn"/>
-  </a>
-</p>
-
 # Software Developer and Data Scientist
+
+[![GitHub](https://img.shields.io/badge/GitHub-%2312100E.svg?&style=flat&logo=github&logoColor=white)](https://github.com/michelle-lo)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?&style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/michelle-lo)
+
+---
 
 ## Education
 
