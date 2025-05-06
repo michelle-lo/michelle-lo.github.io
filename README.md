@@ -1,7 +1,7 @@
 # Software Developer and Data Scientist
 
 [![GitHub](https://img.shields.io/badge/GitHub-%2312100E.svg?&style=flat&logo=github&logoColor=white)](https://github.com/michelle-lo)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?&style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/michelle-lo)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2.svg?&style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michelle-lo-087714216/)
 
 ---
 
@@ -68,6 +68,18 @@ Developed during a hackathon, My Travel Buddy helps streamline trip planning by 
 
 In the least nerdy way possible—I find data fascinating. I love uncovering stories, trends, and actionable insights from numbers. Here are a few examples of my work:
 
+### Data Mining Projects
+
+**Aug 2024 – Dec 2024**
+
+> Python, PyTorch
+
+Tested various data mining and machine learning techniques in a course setting.
+
+* [MNIST Classification](https://docs.google.com/document/d/1w_o6AiN6Ro-AlH9FCl7S3FWU69227aXk/edit?usp=sharing&ouid=105243634621428236674&rtpof=true&sd=true)
+* [HealthTweets Clustering](https://docs.google.com/document/d/1CHfuSOzssfq7a9MgMPTB_w8W2fdPhD3E/edit?usp=sharing&ouid=105243634621428236674&rtpof=true&sd=true)
+* [MovieLens Recommender Systems](https://docs.google.com/document/d/1Odo02IWkI5aSpaz55JxMFsg6srlIVRdg/edit?usp=sharing&ouid=105243634621428236674&rtpof=true&sd=true)
+
 ### Sitcom Success Factors
 
 **April 2024**
@@ -79,6 +91,8 @@ In the least nerdy way possible—I find data fascinating. I love uncovering sto
 Read our report [here](https://docs.google.com/document/d/12OtYufTz_f821ezAydKFshHvFernc59KC2xbSzguGtM/edit?tab=t.0)!
 
 We explored the success factors behind *Brooklyn Nine-Nine* and *Friends* using high-performance computing. Our analysis included sentiment analysis, gendered sentiment, and Latent Dirichlet Allocation (LDA) to identify recurring themes in scripts. Data was gathered using Octoparse.
+
+![LDA Analysis](/assets/img/sitcom_analysis.png)
 
 ### DataFest 2023
 
@@ -95,15 +109,5 @@ See our presentation [here](https://docs.google.com/presentation/d/1UcfdYBBIXICB
 Analyzed 8 datasets related to user demographics and inquiries from ABA Free Legal Answers using Julia. I co-led a team of five to create insightful data visualizations, highlighting peak user activity and optimizing attorney outreach.
 
 ![ASA Data Fest](/assets/img/asa_datafest.png)
-
-### Data Mining Projects
-
-**Aug 2024 – Dec 2024**
-
-Tested various data mining and machine learning techniques in a course setting.
-
-* [MNIST Classification](https://docs.google.com/document/d/1w_o6AiN6Ro-AlH9FCl7S3FWU69227aXk/edit?usp=sharing&ouid=105243634621428236674&rtpof=true&sd=true)
-* [HealthTweets Clustering](https://docs.google.com/document/d/1CHfuSOzssfq7a9MgMPTB_w8W2fdPhD3E/edit?usp=sharing&ouid=105243634621428236674&rtpof=true&sd=true)
-* [MovieLens Recommender Systems](https://docs.google.com/document/d/1Odo02IWkI5aSpaz55JxMFsg6srlIVRdg/edit?usp=sharing&ouid=105243634621428236674&rtpof=true&sd=true)
 
 ---
