@@ -7,7 +7,7 @@
 
 ## Education
 
-**BSE, Dual Major in Computer Science and Data Science & Analytics, Minor in Business Management**
+**BS, Dual Major in Computer Science and Data Science & Analytics, Minor in Business Management**
 
 Case Western Reserve University
 
