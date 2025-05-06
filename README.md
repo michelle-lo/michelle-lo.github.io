@@ -1,3 +1,13 @@
+<p align="center">
+  <a href="https://github.com/michelle-lo" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/30/000000/github.png" alt="GitHub"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/michelle-lo-087714216/" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/30/000000/linkedin.png" alt="LinkedIn"/>
+  </a>
+</p>
+
 # Software Developer and Data Scientist
 
 ## Education
