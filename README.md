@@ -11,6 +11,8 @@
 
 Case Western Reserve University
 
+**Expected Graduation:** May 2026
+
 **Cumulative GPA:** 3.97/4.0
 
 **Relevant Courses:** Software Engineering, Data Mining, Marketing Analytics, Data Science Systems, Algorithms
